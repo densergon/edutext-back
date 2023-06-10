@@ -15,7 +15,7 @@ from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 CORS(app)
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:8gf5eXNZvJVNMkCvcXD6@localhost:3306/edutext'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:8gf5eXNZvJVNMkCvcXD6@localhost:3306/escuela'
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
 
@@ -195,6 +195,8 @@ def analizar():
     
     # Calculamos la calificación
     calificacion = calcular_calificacion(indice_flesch, cantidad_de_palabras, len(errores_gramaticales))
+    if(calificacion<80):
+        calificacion+=20
     
     # Generamos la explicación de la calificación
     explicacion_calificacion = generar_explicacion_calificacion(calificacion)
