@@ -1,0 +1,987 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f41f0bbf833, pid=53236, tid=0x00007f41bf7846c0
+#
+# JRE version: OpenJDK Runtime Environment (8.0_372-b07) (build 1.8.0_372-b07)
+# Java VM: OpenJDK 64-Bit Server VM (25.372-b07 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x9ca833]
+#
+# Core dump written. Default location: /home/daniriolo/Escritorio/edutext-back/core or core.53236
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f41ec0ee000):  JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=53249, stack(0x00007f41bf685000,0x00007f41bf785000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007f0194114c88
+
+Registers:
+RAX=0x0000000000000085, RBX=0x0000000000000ac8, RCX=0x0000000000002000, RDX=0x0000000000000ac8
+RSP=0x00007f41bf77fe00, RBP=0x00007f41bf77fe40, RSI=0x00007f41942f2968, RDI=0x00007f41942f2968
+R8 =0x000000007fffffff, R9 =0x00007f4188488fa0, R10=0x00007f41942f2968, R11=0x000000007fffffff
+R12=0x00007f0194114c70, R13=0x0000000000000ac9, R14=0x0000000000000003, R15=0x00007f41bf781778
+RIP=0x00007f41f0bbf833, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f41bf77fe00)
+0x00007f41bf77fe00:   00007f41942f2968 0000008594344860
+0x00007f41bf77fe10:   00007f41bf77fe40 00007f41bf781840
+0x00007f41bf77fe20:   00007f41942f2968 00007f4194344b90
+0x00007f41bf77fe30:   00007f41942f2898 00007f4194344860
+0x00007f41bf77fe40:   00007f41bf77fed0 00007f41f0a690ab
+0x00007f41bf77fe50:   000000008823c220 00007f41bf780df0
+0x00007f41bf77fe60:   00007f41bf77fed0 0000000000000d7d
+0x00007f41bf77fe70:   00007f4194344860 00007f4194344801
+0x00007f41bf77fe80:   00007f41942f2968 0000000000000010
+0x00007f41bf77fe90:   00007f41942f2968 00007f4100000002
+0x00007f41bf77fea0:   000000000000001e 00007f4194344b90
+0x00007f41bf77feb0:   00007f4194344860 00007f41bf781840
+0x00007f41bf77fec0:   0000000000000000 00007f4194344861
+0x00007f41bf77fed0:   00007f41bf77ff10 00007f41f0a6dd18
+0x00007f41bf77fee0:   00007f41bf77ff10 0000000000000001
+0x00007f41bf77fef0:   00007f41bf781840 00007f41bf780000
+0x00007f41bf77ff00:   00007f41943448c8 00007f41bf780020
+0x00007f41bf77ff10:   00007f41bf77ff60 00007f41f0a6f52c
+0x00007f41bf77ff20:   00007f418c6cbc88 00007f418c2d7ae0
+0x00007f41bf77ff30:   00007f41f0fb0ef8 0000000000000001
+0x00007f41bf77ff40:   00007f41f0fb0ef8 00007f41ec01cfa0
+0x00007f41bf77ff50:   00007f41bf781840 00007f41bf780000
+0x00007f41bf77ff60:   00007f41bf7802b0 00007f41f0a67b43
+0x00007f41bf77ff70:   00007f41ec01cfa0 0100004100000001
+0x00007f41bf77ff80:   00007f418c157950 00007f418c1579a0
+0x00007f41bf77ff90:   0000000000058298 00007f418c15f938
+0x00007f41bf77ffa0:   00007f418c157950 0000000100000000
+0x00007f41bf77ffb0:   00007f41bf780020 00007f41bf781860
+0x00007f41bf77ffc0:   00007f41bf780040 00007f41bf780070
+0x00007f41bf77ffd0:   00007f4100000080 00007f41bf780000
+0x00007f41bf77ffe0:   00007f41ec01cfa0 00000000000067f0
+0x00007f41bf77fff0:   00007f4100000001 00007f4100000012 
+
+Instructions: (pc=0x00007f41f0bbf833)
+0x00007f41f0bbf813:   1f 0f 1f 40 00 41 8b 47 08 44 01 eb 83 e8 01 21
+0x00007f41f0bbf823:   c3 49 8b 47 18 89 da 4c 8b 24 d0 4d 85 e4 74 5d
+0x00007f41f0bbf833:   45 39 74 24 18 75 de 49 8b 04 24 4c 89 e7 ff 10
+0x00007f41f0bbf843:   8b 75 cc 39 f0 75 ce 45 85 f6 74 2c 48 8b 45 c0 
+
+Register to memory mapping:
+
+RAX=0x0000000000000085 is an unknown value
+RBX=0x0000000000000ac8 is an unknown value
+RCX=0x0000000000002000 is an unknown value
+RDX=0x0000000000000ac8 is an unknown value
+RSP=0x00007f41bf77fe00 is pointing into the stack for thread: 0x00007f41ec0ee000
+RBP=0x00007f41bf77fe40 is pointing into the stack for thread: 0x00007f41ec0ee000
+RSI=0x00007f41942f2968 is an unknown value
+RDI=0x00007f41942f2968 is an unknown value
+R8 =0x000000007fffffff is an unknown value
+R9 =0x00007f4188488fa0 is an unknown value
+R10=0x00007f41942f2968 is an unknown value
+R11=0x000000007fffffff is an unknown value
+R12=0x00007f0194114c70 is an unknown value
+R13=0x0000000000000ac9 is an unknown value
+R14=0x0000000000000003 is an unknown value
+R15=0x00007f41bf781778 is pointing into the stack for thread: 0x00007f41ec0ee000
+
+
+Stack: [0x00007f41bf685000,0x00007f41bf785000],  sp=0x00007f41bf77fe00,  free space=1003k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x9ca833]
+V  [libjvm.so+0x8740ab]
+V  [libjvm.so+0x878d18]
+V  [libjvm.so+0x87a52c]
+V  [libjvm.so+0x872b43]
+V  [libjvm.so+0x48e86f]
+V  [libjvm.so+0x490a68]
+V  [libjvm.so+0x3de5ba]
+V  [libjvm.so+0x49a28e]
+V  [libjvm.so+0x49b998]
+V  [libjvm.so+0xadca7c]
+V  [libjvm.so+0x9783c4]
+C  [libc.so.6+0x8744b]
+
+
+Current CompileTask:
+C2:   1474 2953       4       org.languagetool.rules.patterns.PatternTokenMatcher::addMemberAndGroup (75 bytes)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f416402b800 JavaThread "lt-text-checker-thread-0" [_thread_in_Java, id=53262, stack(0x00007f41be038000,0x00007f41be138000)]
+  0x00007f4168008000 JavaThread "lt-server-thread-2" [_thread_blocked, id=53261, stack(0x00007f41be138000,0x00007f41be238000)]
+  0x00007f4168006000 JavaThread "lt-server-thread-1" [_thread_blocked, id=53260, stack(0x00007f41be238000,0x00007f41be338000)]
+  0x00007f4168004800 JavaThread "lt-server-thread-0" [_thread_blocked, id=53259, stack(0x00007f41be538000,0x00007f41be638000)]
+  0x00007f41ec009800 JavaThread "DestroyJavaVM" [_thread_blocked, id=53237, stack(0x00007f41f0008000,0x00007f41f0108000)]
+  0x00007f41ecb2b800 JavaThread "Thread-5" [_thread_in_native, id=53257, stack(0x00007f41be638000,0x00007f41be738000)]
+  0x00007f41ecb29800 JavaThread "idle-timeout-task" daemon [_thread_blocked, id=53256, stack(0x00007f41be738000,0x00007f41be838000)]
+  0x00007f41ecaf1000 JavaThread "LtThreadPoolExecutorMonitor" daemon [_thread_blocked, id=53255, stack(0x00007f41be922000,0x00007f41bea22000)]
+  0x00007f41ec948800 JavaThread "LtThreadPoolExecutorMonitor" daemon [_thread_blocked, id=53254, stack(0x00007f41bee34000,0x00007f41bef34000)]
+  0x00007f41ec943800 JavaThread "LtThreadPoolMonitor" daemon [_thread_blocked, id=53253, stack(0x00007f41bef34000,0x00007f41bf034000)]
+  0x00007f41ec0fd000 JavaThread "Service Thread" daemon [_thread_blocked, id=53251, stack(0x00007f41bf483000,0x00007f41bf583000)]
+  0x00007f41ec0f0000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=53250, stack(0x00007f41bf584000,0x00007f41bf684000)]
+=>0x00007f41ec0ee000 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=53249, stack(0x00007f41bf685000,0x00007f41bf785000)]
+  0x00007f41ec0eb000 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=53248, stack(0x00007f41bf786000,0x00007f41bf886000)]
+  0x00007f41ec0e8000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=53247, stack(0x00007f41bf886000,0x00007f41bf986000)]
+  0x00007f41ec08b800 JavaThread "Finalizer" daemon [_thread_blocked, id=53246, stack(0x00007f41bfbfe000,0x00007f41bfcfe000)]
+  0x00007f41ec087000 JavaThread "Reference Handler" daemon [_thread_blocked, id=53245, stack(0x00007f41bfcfe000,0x00007f41bfdfe000)]
+
+Other Threads:
+  0x00007f41ec07d000 VMThread [stack: 0x00007f41bfdff000,0x00007f41bfeff000] [id=53244]
+  0x00007f41ec0ff800 WatcherThread [stack: 0x00007f41bf383000,0x00007f41bf483000] [id=53252]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000005cba00000, size: 8006 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 279040K, used 226805K [0x0000000719380000, 0x000000072b880000, 0x00000007c0000000)
+  eden space 258048K, 79% used [0x0000000719380000,0x0000000725c83fb0,0x0000000728f80000)
+  from space 20992K, 99% used [0x000000072a400000,0x000000072b879828,0x000000072b880000)
+  to   space 20992K, 0% used [0x0000000728f80000,0x0000000728f80000,0x000000072a400000)
+ ParOldGen       total 343040K, used 3853K [0x00000005cba00000, 0x00000005e0900000, 0x0000000719380000)
+  object space 343040K, 1% used [0x00000005cba00000,0x00000005cbdc3718,0x00000005e0900000)
+ Metaspace       used 18382K, capacity 18894K, committed 19072K, reserved 1067008K
+  class space    used 2075K, capacity 2173K, committed 2176K, reserved 1048576K
+
+Card table byte_map: [0x00007f41dbc6e000,0x00007f41dcc12000] byte_map_base: 0x00007f41d8e11000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f41f0fecfc0
+ Begin Bits: [0x00007f41c45d0000, 0x00007f41cc2e8000)
+ End Bits:   [0x00007f41cc2e8000, 0x00007f41d4000000)
+
+Polling page: 0x00007f41f1226000
+
+CodeCache: size=245760Kb used=10021Kb max_used=10021Kb free=235738Kb
+ bounds [0x00007f41dcfd2000, 0x00007f41dd9a2000, 0x00007f41ebfd2000]
+ total_blobs=3413 nmethods=2980 adapters=346
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1.471 Thread 0x00007f41ec0f0000 3000       1       java.util.concurrent.locks.AbstractQueuedSynchronizer::getState (5 bytes)
+Event: 1.471 Thread 0x00007f41ec0f0000 nmethod 3000 0x00007f41dd991e10 code [0x00007f41dd991f60, 0x00007f41dd992070]
+Event: 1.472 Thread 0x00007f41ec0f0000 3004       2       morfologik.fsa.builders.FSABuilder::compare (67 bytes)
+Event: 1.473 Thread 0x00007f41ec0f0000 nmethod 3004 0x00007f41dd99c3d0 code [0x00007f41dd99c540, 0x00007f41dd99c770]
+Event: 1.473 Thread 0x00007f41ec0f0000 3003       2       morfologik.fsa.builders.FSABuilder::access$000 (12 bytes)
+Event: 1.473 Thread 0x00007f41ec0f0000 nmethod 3003 0x00007f41dd99c990 code [0x00007f41dd99cb00, 0x00007f41dd99cc48]
+Event: 1.473 Thread 0x00007f41ec0f0000 3001       2       morfologik.fsa.builders.FSABuilder$1::compare (13 bytes)
+Event: 1.473 Thread 0x00007f41ec0f0000 nmethod 3001 0x00007f41dd99cd10 code [0x00007f41dd99ce80, 0x00007f41dd99d088]
+Event: 1.473 Thread 0x00007f41ec0f0000 3002       2       morfologik.fsa.builders.FSABuilder$1::compare (12 bytes)
+Event: 1.473 Thread 0x00007f41ec0f0000 nmethod 3002 0x00007f41dd99d210 code [0x00007f41dd99d380, 0x00007f41dd99d528]
+
+GC Heap History (4 events):
+Event: 0.557 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 150016K, used 129024K [0x0000000719380000, 0x0000000723a80000, 0x00000007c0000000)
+  eden space 129024K, 100% used [0x0000000719380000,0x0000000721180000,0x0000000721180000)
+  from space 20992K, 0% used [0x0000000722600000,0x0000000722600000,0x0000000723a80000)
+  to   space 20992K, 0% used [0x0000000721180000,0x0000000721180000,0x0000000722600000)
+ ParOldGen       total 343040K, used 0K [0x00000005cba00000, 0x00000005e0900000, 0x0000000719380000)
+  object space 343040K, 0% used [0x00000005cba00000,0x00000005cba00000,0x00000005e0900000)
+ Metaspace       used 12223K, capacity 12480K, committed 12800K, reserved 1060864K
+  class space    used 1449K, capacity 1516K, committed 1536K, reserved 1048576K
+Event: 0.563 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 150016K, used 11603K [0x0000000719380000, 0x000000072b880000, 0x00000007c0000000)
+  eden space 129024K, 0% used [0x0000000719380000,0x0000000719380000,0x0000000721180000)
+  from space 20992K, 55% used [0x0000000721180000,0x0000000721cd4da8,0x0000000722600000)
+  to   space 20992K, 0% used [0x000000072a400000,0x000000072a400000,0x000000072b880000)
+ ParOldGen       total 343040K, used 80K [0x00000005cba00000, 0x00000005e0900000, 0x0000000719380000)
+  object space 343040K, 0% used [0x00000005cba00000,0x00000005cba14010,0x00000005e0900000)
+ Metaspace       used 12223K, capacity 12480K, committed 12800K, reserved 1060864K
+  class space    used 1449K, capacity 1516K, committed 1536K, reserved 1048576K
+}
+Event: 0.860 GC heap before
+{Heap before GC invocations=2 (full 0):
+ PSYoungGen      total 150016K, used 140627K [0x0000000719380000, 0x000000072b880000, 0x00000007c0000000)
+  eden space 129024K, 100% used [0x0000000719380000,0x0000000721180000,0x0000000721180000)
+  from space 20992K, 55% used [0x0000000721180000,0x0000000721cd4da8,0x0000000722600000)
+  to   space 20992K, 0% used [0x000000072a400000,0x000000072a400000,0x000000072b880000)
+ ParOldGen       total 343040K, used 80K [0x00000005cba00000, 0x00000005e0900000, 0x0000000719380000)
+  object space 343040K, 0% used [0x00000005cba00000,0x00000005cba14010,0x00000005e0900000)
+ Metaspace       used 15749K, capacity 16088K, committed 16384K, reserved 1062912K
+  class space    used 1849K, capacity 1940K, committed 2048K, reserved 1048576K
+Event: 0.869 GC heap after
+Heap after GC invocations=2 (full 0):
+ PSYoungGen      total 279040K, used 20966K [0x0000000719380000, 0x000000072b880000, 0x00000007c0000000)
+  eden space 258048K, 0% used [0x0000000719380000,0x0000000719380000,0x0000000728f80000)
+  from space 20992K, 99% used [0x000000072a400000,0x000000072b879828,0x000000072b880000)
+  to   space 20992K, 0% used [0x0000000728f80000,0x0000000728f80000,0x000000072a400000)
+ ParOldGen       total 343040K, used 3853K [0x00000005cba00000, 0x00000005e0900000, 0x0000000719380000)
+  object space 343040K, 1% used [0x00000005cba00000,0x00000005cbdc3718,0x00000005e0900000)
+ Metaspace       used 15749K, capacity 16088K, committed 16384K, reserved 1062912K
+  class space    used 1849K, capacity 1940K, committed 2048K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 1.361 Thread 0x00007f416402b800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f41dd1b8a84 method=java.lang.AbstractStringBuilder.append(Ljava/lang/String;)Ljava/lang/AbstractStringBuilder; @ 1
+Event: 1.368 Thread 0x00007f416402b800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f41dd594a8c method=java.lang.Character.toUpperCase(I)I @ 5
+Event: 1.368 Thread 0x00007f416402b800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f41dd43facc method=java.lang.Character.toUpperCase(I)I @ 5
+Event: 1.396 Thread 0x00007f416402b800 Uncommon trap: reason=null_check action=make_not_entrant pc=0x00007f41dd9114b4 method=org.languagetool.AnalyzedTokenReadings.hasPosTag(Ljava/lang/String;)Z @ 33
+Event: 1.465 Thread 0x00007f416402b800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f41dd92604c method=java.util.regex.Pattern$BranchConn.match(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Z @ 7
+Event: 1.465 Thread 0x00007f416402b800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f41dd92604c method=java.util.regex.Pattern$BranchConn.match(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Z @ 7
+Event: 1.468 Thread 0x00007f416402b800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f41dd625368 method=java.util.Arrays.hashCode([Ljava/lang/Object;)I @ 34
+Event: 1.469 Thread 0x00007f416402b800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f41dd3a141c method=java.lang.Character.isSurrogate(C)Z @ 9
+Event: 1.469 Thread 0x00007f416402b800 Uncommon trap: reason=unloaded action=reinterpret pc=0x00007f41dd428ec4 method=sun.nio.cs.UTF_8$Encoder.encode([CII[B)I @ 153
+Event: 1.471 Thread 0x00007f416402b800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f41dd54f288 method=java.util.regex.Pattern$BnM.match(Ljava/util/regex/Matcher;ILjava/lang/CharSequence;)Z @ 111
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.712 Thread 0x00007f4168004800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$comparing$77a9974f$1(Ljava/util/function/Function;Ljava/lang/Object;Ljava/lang/Object;)I> (0x000000071e1fccb8) thrown at [/usr/src/debug/java8-openjdk/jdk8u-jdk8u372-b07/hotspot/src/share
+Event: 0.779 Thread 0x00007f416402b800 Implicit null exception at 0x00007f41dd426336 to 0x00007f41dd426cc9
+Event: 0.785 Thread 0x00007f416402b800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$identity$2(Ljava/lang/Object;)Ljava/lang/Object;> (0x000000071f379c38) thrown at [/usr/src/debug/java8-openjdk/jdk8u-jdk8u372-b07/hotspot/src/share/vm/interpreter/linkResolver.cpp, line 6
+Event: 0.804 Thread 0x00007f416402b800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$thenComparing$36697e65$1(Ljava/util/Comparator;Ljava/lang/Object;Ljava/lang/Object;)I> (0x000000071f575630) thrown at [/usr/src/debug/java8-openjdk/jdk8u-jdk8u372-b07/hotspot/src/share/vm
+Event: 1.203 Thread 0x00007f416402b800 Exception <a 'java/io/FileNotFoundException'> (0x000000072172f038) thrown at [/usr/src/debug/java8-openjdk/jdk8u-jdk8u372-b07/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 1.203 Thread 0x00007f416402b800 Exception <a 'java/io/FileNotFoundException'> (0x000000072172fad0) thrown at [/usr/src/debug/java8-openjdk/jdk8u-jdk8u372-b07/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 1.203 Thread 0x00007f416402b800 Exception <a 'java/io/FileNotFoundException'> (0x0000000721731548) thrown at [/usr/src/debug/java8-openjdk/jdk8u-jdk8u372-b07/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 1.361 Thread 0x00007f416402b800 Implicit null exception at 0x00007f41dd1b86b6 to 0x00007f41dd1b8a6d
+Event: 1.396 Thread 0x00007f416402b800 Implicit null exception at 0x00007f41dd91137a to 0x00007f41dd911499
+Event: 1.468 Thread 0x00007f416402b800 Implicit null exception at 0x00007f41dd6252af to 0x00007f41dd625349
+
+Events (10 events):
+Event: 1.469 loading class sun/nio/cs/Surrogate done
+Event: 1.471 Thread 0x00007f416402b800 Uncommon trap: trap_request=0xffffffde fr.pc=0x00007f41dd54f288
+Event: 1.471 Thread 0x00007f416402b800 DEOPT PACKING pc=0x00007f41dd54f288 sp=0x00007f41be135b50
+Event: 1.471 Thread 0x00007f416402b800 DEOPT UNPACKING pc=0x00007f41dd01747a sp=0x00007f41be1359d8 mode 2
+Event: 1.471 loading class morfologik/fsa/builders/FSABuilder
+Event: 1.471 loading class morfologik/fsa/builders/FSABuilder done
+Event: 1.472 loading class morfologik/fsa/builders/ConstantArcSizeFSA
+Event: 1.472 loading class morfologik/fsa/builders/ConstantArcSizeFSA done
+Event: 1.472 loading class morfologik/fsa/builders/FSABuilder$1
+Event: 1.472 loading class morfologik/fsa/builders/FSABuilder$1 done
+
+
+Dynamic libraries:
+5cba00000-5e0900000 rw-p 00000000 00:00 0 
+5e0900000-719380000 ---p 00000000 00:00 0 
+719380000-72b880000 rw-p 00000000 00:00 0 
+72b880000-7c0000000 ---p 00000000 00:00 0 
+7c0000000-7c0220000 rw-p 00000000 00:00 0 
+7c0220000-800000000 ---p 00000000 00:00 0 
+5584d547a000-5584d547b000 r--p 00000000 08:12 789644                     /usr/lib/jvm/java-8-openjdk/jre/bin/java
+5584d547b000-5584d547c000 r-xp 00001000 08:12 789644                     /usr/lib/jvm/java-8-openjdk/jre/bin/java
+5584d547c000-5584d547d000 r--p 00002000 08:12 789644                     /usr/lib/jvm/java-8-openjdk/jre/bin/java
+5584d547d000-5584d547e000 r--p 00002000 08:12 789644                     /usr/lib/jvm/java-8-openjdk/jre/bin/java
+5584d547e000-5584d547f000 rw-p 00003000 08:12 789644                     /usr/lib/jvm/java-8-openjdk/jre/bin/java
+5584d5beb000-5584d5c0c000 rw-p 00000000 00:00 0                          [heap]
+7f4158000000-7f4158196000 rw-p 00000000 00:00 0 
+7f4158196000-7f415c000000 ---p 00000000 00:00 0 
+7f4160000000-7f4160021000 rw-p 00000000 00:00 0 
+7f4160021000-7f4164000000 ---p 00000000 00:00 0 
+7f4164000000-7f416402d000 rw-p 00000000 00:00 0 
+7f416402d000-7f4168000000 ---p 00000000 00:00 0 
+7f4168000000-7f4168021000 rw-p 00000000 00:00 0 
+7f4168021000-7f416c000000 ---p 00000000 00:00 0 
+7f416c000000-7f416c06c000 rw-p 00000000 00:00 0 
+7f416c06c000-7f4170000000 ---p 00000000 00:00 0 
+7f4170000000-7f4170021000 rw-p 00000000 00:00 0 
+7f4170021000-7f4174000000 ---p 00000000 00:00 0 
+7f4174000000-7f4174021000 rw-p 00000000 00:00 0 
+7f4174021000-7f4178000000 ---p 00000000 00:00 0 
+7f4178000000-7f4178021000 rw-p 00000000 00:00 0 
+7f4178021000-7f417c000000 ---p 00000000 00:00 0 
+7f417c000000-7f417c021000 rw-p 00000000 00:00 0 
+7f417c021000-7f4180000000 ---p 00000000 00:00 0 
+7f4180000000-7f4180021000 rw-p 00000000 00:00 0 
+7f4180021000-7f4184000000 ---p 00000000 00:00 0 
+7f4184000000-7f4184021000 rw-p 00000000 00:00 0 
+7f4184021000-7f4188000000 ---p 00000000 00:00 0 
+7f4188000000-7f41886eb000 rw-p 00000000 00:00 0 
+7f41886eb000-7f418c000000 ---p 00000000 00:00 0 
+7f418c000000-7f418c7d5000 rw-p 00000000 00:00 0 
+7f418c7d5000-7f4190000000 ---p 00000000 00:00 0 
+7f4190000000-7f4190021000 rw-p 00000000 00:00 0 
+7f4190021000-7f4194000000 ---p 00000000 00:00 0 
+7f4194000000-7f41948ec000 rw-p 00000000 00:00 0 
+7f41948ec000-7f4198000000 ---p 00000000 00:00 0 
+7f4198000000-7f4198021000 rw-p 00000000 00:00 0 
+7f4198021000-7f419c000000 ---p 00000000 00:00 0 
+7f419c000000-7f419c021000 rw-p 00000000 00:00 0 
+7f419c021000-7f41a0000000 ---p 00000000 00:00 0 
+7f41a0000000-7f41a0021000 rw-p 00000000 00:00 0 
+7f41a0021000-7f41a4000000 ---p 00000000 00:00 0 
+7f41a4000000-7f41a4021000 rw-p 00000000 00:00 0 
+7f41a4021000-7f41a8000000 ---p 00000000 00:00 0 
+7f41a8000000-7f41a8021000 rw-p 00000000 00:00 0 
+7f41a8021000-7f41ac000000 ---p 00000000 00:00 0 
+7f41b0000000-7f41b0021000 rw-p 00000000 00:00 0 
+7f41b0021000-7f41b4000000 ---p 00000000 00:00 0 
+7f41b8000000-7f41b8021000 rw-p 00000000 00:00 0 
+7f41b8021000-7f41bc000000 ---p 00000000 00:00 0 
+7f41bd941000-7f41bd9c1000 rw-p 00000000 00:00 0 
+7f41bd9c1000-7f41bdb41000 ---p 00000000 00:00 0 
+7f41bdb41000-7f41bdb43000 r--p 00000000 08:12 665816                     /usr/lib/libXdmcp.so.6.0.0
+7f41bdb43000-7f41bdb45000 r-xp 00002000 08:12 665816                     /usr/lib/libXdmcp.so.6.0.0
+7f41bdb45000-7f41bdb47000 r--p 00004000 08:12 665816                     /usr/lib/libXdmcp.so.6.0.0
+7f41bdb47000-7f41bdb48000 r--p 00005000 08:12 665816                     /usr/lib/libXdmcp.so.6.0.0
+7f41bdb48000-7f41bdb49000 rw-p 00006000 08:12 665816                     /usr/lib/libXdmcp.so.6.0.0
+7f41bdb49000-7f41bdb4a000 r--p 00000000 08:12 674520                     /usr/lib/libXau.so.6.0.0
+7f41bdb4a000-7f41bdb4b000 r-xp 00001000 08:12 674520                     /usr/lib/libXau.so.6.0.0
+7f41bdb4b000-7f41bdb4c000 r--p 00002000 08:12 674520                     /usr/lib/libXau.so.6.0.0
+7f41bdb4c000-7f41bdb4d000 r--p 00002000 08:12 674520                     /usr/lib/libXau.so.6.0.0
+7f41bdb4d000-7f41bdb4e000 rw-p 00003000 08:12 674520                     /usr/lib/libXau.so.6.0.0
+7f41bdb4e000-7f41bdb5a000 r--p 00000000 08:12 665804                     /usr/lib/libxcb.so.1.1.0
+7f41bdb5a000-7f41bdb6e000 r-xp 0000c000 08:12 665804                     /usr/lib/libxcb.so.1.1.0
+7f41bdb6e000-7f41bdb77000 r--p 00020000 08:12 665804                     /usr/lib/libxcb.so.1.1.0
+7f41bdb77000-7f41bdb78000 r--p 00028000 08:12 665804                     /usr/lib/libxcb.so.1.1.0
+7f41bdb78000-7f41bdb79000 rw-p 00029000 08:12 665804                     /usr/lib/libxcb.so.1.1.0
+7f41bdb79000-7f41bdb7c000 r--p 00000000 08:12 660803                     /usr/lib/libXi.so.6.1.0
+7f41bdb7c000-7f41bdb88000 r-xp 00003000 08:12 660803                     /usr/lib/libXi.so.6.1.0
+7f41bdb88000-7f41bdb8b000 r--p 0000f000 08:12 660803                     /usr/lib/libXi.so.6.1.0
+7f41bdb8b000-7f41bdb8c000 r--p 00011000 08:12 660803                     /usr/lib/libXi.so.6.1.0
+7f41bdb8c000-7f41bdb8d000 rw-p 00012000 08:12 660803                     /usr/lib/libXi.so.6.1.0
+7f41bdb8d000-7f41bdb8f000 r--p 00000000 08:12 673572                     /usr/lib/libXtst.so.6.1.0
+7f41bdb8f000-7f41bdb92000 r-xp 00002000 08:12 673572                     /usr/lib/libXtst.so.6.1.0
+7f41bdb92000-7f41bdb93000 r--p 00005000 08:12 673572                     /usr/lib/libXtst.so.6.1.0
+7f41bdb93000-7f41bdb94000 r--p 00006000 08:12 673572                     /usr/lib/libXtst.so.6.1.0
+7f41bdb94000-7f41bdb95000 rw-p 00007000 08:12 673572                     /usr/lib/libXtst.so.6.1.0
+7f41bdb95000-7f41bdbb1000 r--p 00000000 08:12 668258                     /usr/lib/libX11.so.6.4.0
+7f41bdbb1000-7f41bdc3c000 r-xp 0001c000 08:12 668258                     /usr/lib/libX11.so.6.4.0
+7f41bdc3c000-7f41bdcd1000 r--p 000a7000 08:12 668258                     /usr/lib/libX11.so.6.4.0
+7f41bdcd1000-7f41bdcd4000 r--p 0013b000 08:12 668258                     /usr/lib/libX11.so.6.4.0
+7f41bdcd4000-7f41bdcd8000 rw-p 0013e000 08:12 668258                     /usr/lib/libX11.so.6.4.0
+7f41bdcff000-7f41bdd0f000 r--p 00000000 08:12 789665                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt_xawt.so
+7f41bdd0f000-7f41bdd4b000 r-xp 00010000 08:12 789665                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt_xawt.so
+7f41bdd4b000-7f41bdd5c000 r--p 0004c000 08:12 789665                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt_xawt.so
+7f41bdd5c000-7f41bdd5d000 r--p 0005d000 08:12 789665                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt_xawt.so
+7f41bdd5d000-7f41bdd5f000 rw-p 0005e000 08:12 789665                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt_xawt.so
+7f41bdd5f000-7f41bdd61000 rw-p 00000000 00:00 0 
+7f41bdd61000-7f41bdd8e000 r--p 00000000 08:12 789663                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt.so
+7f41bdd8e000-7f41bddfb000 r-xp 0002d000 08:12 789663                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt.so
+7f41bddfb000-7f41bde07000 r--p 0009a000 08:12 789663                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt.so
+7f41bde07000-7f41bde08000 r--p 000a6000 08:12 789663                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt.so
+7f41bde08000-7f41bde13000 rw-p 000a7000 08:12 789663                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libawt.so
+7f41bde13000-7f41be038000 rw-p 00000000 00:00 0 
+7f41be038000-7f41be03b000 ---p 00000000 00:00 0 
+7f41be03b000-7f41be138000 rw-p 00000000 00:00 0 
+7f41be138000-7f41be13b000 ---p 00000000 00:00 0 
+7f41be13b000-7f41be238000 rw-p 00000000 00:00 0 
+7f41be238000-7f41be23b000 ---p 00000000 00:00 0 
+7f41be23b000-7f41be538000 rw-p 00000000 00:00 0 
+7f41be538000-7f41be53b000 ---p 00000000 00:00 0 
+7f41be53b000-7f41be638000 rw-p 00000000 00:00 0 
+7f41be638000-7f41be63b000 ---p 00000000 00:00 0 
+7f41be63b000-7f41be738000 rw-p 00000000 00:00 0 
+7f41be738000-7f41be73b000 ---p 00000000 00:00 0 
+7f41be73b000-7f41be838000 rw-p 00000000 00:00 0 
+7f41be838000-7f41be83b000 r--p 00000000 08:12 668255                     /usr/lib/libnss_resolve.so.2
+7f41be83b000-7f41be853000 r-xp 00003000 08:12 668255                     /usr/lib/libnss_resolve.so.2
+7f41be853000-7f41be85b000 r--p 0001b000 08:12 668255                     /usr/lib/libnss_resolve.so.2
+7f41be85b000-7f41be85c000 r--p 00022000 08:12 668255                     /usr/lib/libnss_resolve.so.2
+7f41be85c000-7f41be85d000 rw-p 00023000 08:12 668255                     /usr/lib/libnss_resolve.so.2
+7f41be85d000-7f41be860000 r--p 00000000 08:12 666081                     /usr/lib/libresolv.so.2
+7f41be860000-7f41be868000 r-xp 00003000 08:12 666081                     /usr/lib/libresolv.so.2
+7f41be868000-7f41be86b000 r--p 0000b000 08:12 666081                     /usr/lib/libresolv.so.2
+7f41be86b000-7f41be86c000 r--p 0000d000 08:12 666081                     /usr/lib/libresolv.so.2
+7f41be86c000-7f41be86d000 rw-p 0000e000 08:12 666081                     /usr/lib/libresolv.so.2
+7f41be86d000-7f41be86f000 rw-p 00000000 00:00 0 
+7f41be86f000-7f41be870000 r--p 00000000 08:12 672326                     /usr/lib/libnss_mdns_minimal.so.2
+7f41be870000-7f41be872000 r-xp 00001000 08:12 672326                     /usr/lib/libnss_mdns_minimal.so.2
+7f41be872000-7f41be873000 r--p 00003000 08:12 672326                     /usr/lib/libnss_mdns_minimal.so.2
+7f41be873000-7f41be874000 r--p 00003000 08:12 672326                     /usr/lib/libnss_mdns_minimal.so.2
+7f41be874000-7f41be875000 rw-p 00004000 08:12 672326                     /usr/lib/libnss_mdns_minimal.so.2
+7f41be875000-7f41be879000 r--p 00000000 08:12 660078                     /usr/lib/libgcc_s.so.1
+7f41be879000-7f41be894000 r-xp 00004000 08:12 660078                     /usr/lib/libgcc_s.so.1
+7f41be894000-7f41be898000 r--p 0001f000 08:12 660078                     /usr/lib/libgcc_s.so.1
+7f41be898000-7f41be899000 r--p 00022000 08:12 660078                     /usr/lib/libgcc_s.so.1
+7f41be899000-7f41be89a000 rw-p 00023000 08:12 660078                     /usr/lib/libgcc_s.so.1
+7f41be89a000-7f41be89d000 r--p 00000000 08:12 665637                     /usr/lib/libcap.so.2.69
+7f41be89d000-7f41be8a2000 r-xp 00003000 08:12 665637                     /usr/lib/libcap.so.2.69
+7f41be8a2000-7f41be8a4000 r--p 00008000 08:12 665637                     /usr/lib/libcap.so.2.69
+7f41be8a4000-7f41be8a5000 r--p 00009000 08:12 665637                     /usr/lib/libcap.so.2.69
+7f41be8a5000-7f41be8a6000 rw-p 0000a000 08:12 665637                     /usr/lib/libcap.so.2.69
+7f41be8a6000-7f41be8ad000 r--p 00000000 08:12 668253                     /usr/lib/libnss_mymachines.so.2
+7f41be8ad000-7f41be8e3000 r-xp 00007000 08:12 668253                     /usr/lib/libnss_mymachines.so.2
+7f41be8e3000-7f41be8f6000 r--p 0003d000 08:12 668253                     /usr/lib/libnss_mymachines.so.2
+7f41be8f6000-7f41be8f9000 r--p 00050000 08:12 668253                     /usr/lib/libnss_mymachines.so.2
+7f41be8f9000-7f41be8fa000 rw-p 00053000 08:12 668253                     /usr/lib/libnss_mymachines.so.2
+7f41be8fa000-7f41be8fb000 rw-p 00000000 00:00 0 
+7f41be8fb000-7f41be8fd000 r--p 00000000 08:12 673568                     /usr/lib/libXrender.so.1.3.0
+7f41be8fd000-7f41be904000 r-xp 00002000 08:12 673568                     /usr/lib/libXrender.so.1.3.0
+7f41be904000-7f41be906000 r--p 00009000 08:12 673568                     /usr/lib/libXrender.so.1.3.0
+7f41be906000-7f41be907000 r--p 0000a000 08:12 673568                     /usr/lib/libXrender.so.1.3.0
+7f41be907000-7f41be908000 rw-p 0000b000 08:12 673568                     /usr/lib/libXrender.so.1.3.0
+7f41be908000-7f41be90c000 r--p 00000000 08:12 665817                     /usr/lib/libXext.so.6.4.0
+7f41be90c000-7f41be917000 r-xp 00004000 08:12 665817                     /usr/lib/libXext.so.6.4.0
+7f41be917000-7f41be91b000 r--p 0000f000 08:12 665817                     /usr/lib/libXext.so.6.4.0
+7f41be91b000-7f41be91c000 r--p 00012000 08:12 665817                     /usr/lib/libXext.so.6.4.0
+7f41be91c000-7f41be91d000 rw-p 00013000 08:12 665817                     /usr/lib/libXext.so.6.4.0
+7f41be91d000-7f41be922000 r--s 002f9000 08:12 789699                     /usr/lib/jvm/java-8-openjdk/jre/lib/charsets.jar
+7f41be922000-7f41be925000 ---p 00000000 00:00 0 
+7f41be925000-7f41bec22000 rw-p 00000000 00:00 0 
+7f41bec22000-7f41bec34000 r--s 0034c000 08:12 789751                     /usr/lib/jvm/java-8-openjdk/jre/lib/resources.jar
+7f41bec34000-7f41bee34000 rw-p 00000000 00:00 0 
+7f41bee34000-7f41bee37000 ---p 00000000 00:00 0 
+7f41bee37000-7f41bef34000 rw-p 00000000 00:00 0 
+7f41bef34000-7f41bef37000 ---p 00000000 00:00 0 
+7f41bef37000-7f41bf034000 rw-p 00000000 00:00 0 
+7f41bf034000-7f41bf03e000 r--s 00117000 08:12 789713                     /usr/lib/jvm/java-8-openjdk/jre/lib/ext/localedata.jar
+7f41bf03e000-7f41bf05a000 r--s 00394000 08:12 789709                     /usr/lib/jvm/java-8-openjdk/jre/lib/ext/cldrdata.jar
+7f41bf05a000-7f41bf07b000 r--p 00000000 08:12 1574190                    /usr/share/locale/es/LC_MESSAGES/libc.mo
+7f41bf07b000-7f41bf07c000 r--s 00004000 08:12 9441506                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/ecs-logging-core.jar
+7f41bf07c000-7f41bf07d000 r--s 00002000 08:12 9441505                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/logback-ecs-encoder.jar
+7f41bf07d000-7f41bf07e000 r--s 00002000 08:12 9441504                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/reactive-streams.jar
+7f41bf07e000-7f41bf094000 r--s 0016b000 08:12 9441503                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/reactor-core.jar
+7f41bf094000-7f41bf09e000 r--s 0006c000 08:12 9441502                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/netty-transport.jar
+7f41bf09e000-7f41bf0a0000 r--s 00007000 08:12 9441501                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/netty-tcnative-classes.jar
+7f41bf0a0000-7f41bf0a7000 r--s 0004c000 08:12 9441500                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/netty-codec.jar
+7f41bf0a7000-7f41bf0ab000 r--s 00046000 08:12 9441499                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/netty-buffer.jar
+7f41bf0ab000-7f41bf0ad000 r--s 00008000 08:12 9441498                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/netty-resolver.jar
+7f41bf0ad000-7f41bf0b7000 r--s 00076000 08:12 9441497                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/netty-handler.jar
+7f41bf0b7000-7f41bf0c4000 r--s 00091000 08:12 9441496                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/netty-common.jar
+7f41bf0c4000-7f41bf0e5000 r--s 001a0000 08:12 9441495                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/lettuce-core.jar
+7f41bf0e5000-7f41bf0e6000 r--s 00001000 08:12 9441448                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/simpleclient_common.jar
+7f41bf0e6000-7f41bf0e7000 r--s 00003000 08:12 9441494                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/simpleclient_httpserver.jar
+7f41bf0e7000-7f41bf0e8000 r--s 00005000 08:12 9441493                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/simpleclient_hotspot.jar
+7f41bf0e8000-7f41bf0ea000 r--s 0000b000 08:12 9441492                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/websocket-api.jar
+7f41bf0ea000-7f41bf0ec000 r--s 00006000 08:12 9441491                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/websocket-servlet.jar
+7f41bf0ec000-7f41bf0f3000 r--s 00049000 08:12 9441490                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jetty-client.jar
+7f41bf0f3000-7f41bf0f5000 r--s 0000a000 08:12 9441489                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/websocket-client.jar
+7f41bf0f5000-7f41bf0fa000 r--s 00030000 08:12 9441488                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/websocket-common.jar
+7f41bf0fa000-7f41bf0fb000 r--s 0000a000 08:12 9441487                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/websocket-server.jar
+7f41bf0fb000-7f41bf0fd000 r--s 0000f000 08:12 9441486                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jetty-util-ajax.jar
+7f41bf0fd000-7f41bf0ff000 r--s 0001b000 08:12 9441485                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jetty-security.jar
+7f41bf0ff000-7f41bf102000 r--s 00021000 08:12 9441484                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jetty-servlet.jar
+7f41bf102000-7f41bf104000 r--s 0000f000 08:12 9441483                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jetty-xml.jar
+7f41bf104000-7f41bf107000 r--s 00020000 08:12 9441482                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jetty-webapp.jar
+7f41bf107000-7f41bf10b000 r--s 00028000 08:12 9441481                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jetty-io.jar
+7f41bf10b000-7f41bf114000 r--s 00085000 08:12 9441480                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jetty-util.jar
+7f41bf114000-7f41bf117000 r--s 00034000 08:12 9441479                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jetty-http.jar
+7f41bf117000-7f41bf11a000 r--s 00015000 08:12 9441478                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/javax.servlet-api.jar
+7f41bf11a000-7f41bf124000 r--s 000a6000 08:12 9441477                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jetty-server.jar
+7f41bf124000-7f41bf128000 r--s 00024000 08:12 9441476                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/spark-core.jar
+7f41bf128000-7f41bf131000 r--s 00090000 08:12 9441475                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/mariadb-java-client.jar
+7f41bf131000-7f41bf14d000 r--s 0019f000 08:12 9441474                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/mybatis.jar
+7f41bf14d000-7f41bf14f000 r--s 00011000 08:12 9441473                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/bytes.jar
+7f41bf14f000-7f41bf151000 r--s 00009000 08:12 9441472                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/bcrypt.jar
+7f41bf151000-7f41bf158000 r--s 00050000 08:12 9441471                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/commons-codec.jar
+7f41bf158000-7f41bf15a000 r--s 0000c000 08:12 9441470                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/java-jwt.jar
+7f41bf15a000-7f41bf15f000 r--s 00055000 08:12 9441418                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jackson-core.jar
+7f41bf15f000-7f41bf162000 r--s 00010000 08:12 9441417                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jackson-annotations.jar
+7f41bf162000-7f41bf179000 r--s 0015b000 08:12 9441416                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jackson-databind.jar
+7f41bf179000-7f41bf183000 r--s 00065000 08:12 9441530                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/logback-core.jar
+7f41bf183000-7f41bf189000 r--s 00034000 08:12 9441529                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/logback-classic.jar
+7f41bf189000-7f41bf18b000 r--s 00009000 08:12 9441528                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/slf4j-api.jar
+7f41bf18b000-7f41bf18d000 r--s 005ab000 08:12 9441522                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/morfologik-ukrainian-lt.jar
+7f41bf18d000-7f41bf18e000 r--s 002a4000 08:12 9441521                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/spanish-pos-dict.jar
+7f41bf18e000-7f41bf203000 r--s 00c9e000 08:12 9441520                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/icu4j.jar
+7f41bf203000-7f41bf206000 r--s 007eb000 08:12 9441519                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/lucene-gosen-ipadic.jar
+7f41bf206000-7f41bf207000 r--s 00003000 08:12 9441518                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/morphology-el.jar
+7f41bf207000-7f41bf208000 r--s 00c47000 08:12 9441517                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/languagetool-ga-dicts.jar
+7f41bf208000-7f41bf21c000 r--s 007b0000 08:12 9441516                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/hanlp.jar
+7f41bf21c000-7f41bf21e000 r--s 00322000 08:12 9441515                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/catalan-pos-dict.jar
+7f41bf21e000-7f41bf220000 r--s 0005c000 08:12 9441514                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jwordsplitter.jar
+7f41bf220000-7f41bf223000 r--s 00010000 08:12 9441513                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/openregex.jar
+7f41bf223000-7f41bf225000 r--s 00156000 08:12 9441512                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/german-pos-dict.jar
+7f41bf225000-7f41bf226000 r--s 00107000 08:12 9441511                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/french-pos-dict.jar
+7f41bf226000-7f41bf227000 r--s 00271000 08:12 9441510                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/opennlp-chunk-models.jar
+7f41bf227000-7f41bf228000 r--s 0056f000 08:12 9441509                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/opennlp-postag-models.jar
+7f41bf228000-7f41bf229000 r--s 0006b000 08:12 9441508                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/opennlp-tokenize-models.jar
+7f41bf229000-7f41bf241000 r--s 00126000 08:12 9441507                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/opennlp-tools.jar
+7f41bf241000-7f41bf242000 r--s 00010000 08:12 9441468                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/languagetool-gui-commons.jar
+7f41bf242000-7f41bf243000 r--s 0000d000 08:12 9441467                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/json.jar
+7f41bf243000-7f41bf245000 r--s 0000f000 08:12 9441466                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/emoji-java.jar
+7f41bf245000-7f41bf24b000 r--s 0002b000 08:12 9441465                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/commons-digester.jar
+7f41bf24b000-7f41bf250000 r--s 00038000 08:12 9441464                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/commons-beanutils.jar
+7f41bf250000-7f41bf254000 r--s 0002b000 08:12 9441463                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/commons-validator.jar
+7f41bf254000-7f41bf25f000 r--s 00081000 08:12 9441462                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/trove4j.jar
+7f41bf25f000-7f41bf262000 r--s 0001e000 08:12 9441461                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/commons-pool2.jar
+7f41bf262000-7f41bf264000 r--s 0000b000 08:12 9441460                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/grpc-stub.jar
+7f41bf264000-7f41bf265000 r--s 00001000 08:12 9441459                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/grpc-protobuf-lite.jar
+7f41bf265000-7f41bf273000 r--s 0016f000 08:12 9441458                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/proto-google-common-protos.jar
+7f41bf273000-7f41bf285000 r--s 00188000 08:12 9441457                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/protobuf-java.jar
+7f41bf285000-7f41bf287000 r--s 00006000 08:12 9441456                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/grpc-context.jar
+7f41bf287000-7f41bf28e000 r--s 00038000 08:12 9441455                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/grpc-api.jar
+7f41bf28e000-7f41bf28f000 r--s 00001000 08:12 9441454                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/grpc-protobuf.jar
+7f41bf28f000-7f41bf294000 r--s 00036000 08:12 9441453                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/gson.jar
+7f41bf294000-7f41bf2a2000 r--s 0009a000 08:12 9441452                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/grpc-core.jar
+7f41bf2a2000-7f41bf2a3000 r--s 00001000 08:12 9441451                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/perfmark-api.jar
+7f41bf2a3000-7f41bf2f5000 r--s 0077d000 08:12 9441450                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/grpc-netty-shaded.jar
+7f41bf2f5000-7f41bf2f7000 r--s 00005000 08:12 9441449                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/javax.annotation-api.jar
+7f41bf2f7000-7f41bf2f9000 r--s 00006000 08:12 9441447                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/LatencyUtils.jar
+7f41bf2f9000-7f41bf2fd000 r--s 00027000 08:12 9441446                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/HdrHistogram.jar
+7f41bf2fd000-7f41bf309000 r--s 00090000 08:12 9441445                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/micrometer-core.jar
+7f41bf309000-7f41bf30b000 r--s 00008000 08:12 9441444                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/micrometer-registry-prometheus.jar
+7f41bf30b000-7f41bf30d000 r--s 0000b000 08:12 9441443                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/resilience4j-micrometer.jar
+7f41bf30d000-7f41bf310000 r--s 0000e000 08:12 9441442                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/resilience4j-core.jar
+7f41bf310000-7f41bf311000 r--s 00000000 08:12 9441441                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/vavr-match.jar
+7f41bf311000-7f41bf31a000 r--s 000d3000 08:12 9441440                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/vavr.jar
+7f41bf31a000-7f41bf31c000 r--s 00011000 08:12 9441439                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/resilience4j-circuitbreaker.jar
+7f41bf31c000-7f41bf31d000 r--s 00001000 08:12 9441438                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/simpleclient_guava.jar
+7f41bf31d000-7f41bf31f000 r--s 00000000 08:12 9441437                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/simpleclient_tracer_otel_agent.jar
+7f41bf31f000-7f41bf321000 r--s 00000000 08:12 9441435                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/simpleclient_tracer_otel.jar
+7f41bf321000-7f41bf324000 r--s 00013000 08:12 9441434                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/simpleclient.jar
+7f41bf324000-7f41bf326000 r--s 0000e000 08:12 9441433                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/commons-logging.jar
+7f41bf326000-7f41bf335000 r--s 000e1000 08:12 9441432                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/dx.jar
+7f41bf335000-7f41bf33e000 r--s 000dc000 08:12 9441431                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/bridj.jar
+7f41bf33e000-7f41bf340000 r--s 000d4000 08:12 9441430                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/hunspell.jar
+7f41bf340000-7f41bf342000 r--s 0000c000 08:12 9441429                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/javax.activation-api.jar
+7f41bf342000-7f41bf347000 r--s 00044000 08:12 9441428                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/FastInfoset.jar
+7f41bf347000-7f41bf349000 r--s 00007000 08:12 9441427                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/stax-ex.jar
+7f41bf349000-7f41bf35a000 r--s 000d9000 08:12 9441423                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jaxb-runtime.jar
+7f41bf35a000-7f41bf382000 r--s 0021b000 08:12 9441414                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/lucene-core.jar
+7f41bf382000-7f41bf383000 ---p 00000000 00:00 0 
+7f41bf383000-7f41bf483000 rw-p 00000000 00:00 0 
+7f41bf483000-7f41bf486000 ---p 00000000 00:00 0 
+7f41bf486000-7f41bf583000 rw-p 00000000 00:00 0 
+7f41bf583000-7f41bf584000 ---p 00000000 00:00 0 
+7f41bf584000-7f41bf587000 ---p 00000000 00:00 0 
+7f41bf587000-7f41bf684000 rw-p 00000000 00:00 0 
+7f41bf684000-7f41bf685000 ---p 00000000 00:00 0 
+7f41bf685000-7f41bf688000 ---p 00000000 00:00 0 
+7f41bf688000-7f41bf785000 rw-p 00000000 00:00 0 
+7f41bf785000-7f41bf786000 ---p 00000000 00:00 0 
+7f41bf786000-7f41bf789000 ---p 00000000 00:00 0 
+7f41bf789000-7f41bf886000 rw-p 00000000 00:00 0 
+7f41bf886000-7f41bf889000 ---p 00000000 00:00 0 
+7f41bf889000-7f41bf986000 rw-p 00000000 00:00 0 
+7f41bf986000-7f41bfbfe000 r--p 00000000 07:17 326                        /var/lib/snapd/snap/code/130/usr/lib/locale/an_ES.utf8/LC_COLLATE
+7f41bfbfe000-7f41bfc01000 ---p 00000000 00:00 0 
+7f41bfc01000-7f41bfcfe000 rw-p 00000000 00:00 0 
+7f41bfcfe000-7f41bfd01000 ---p 00000000 00:00 0 
+7f41bfd01000-7f41bfdfe000 rw-p 00000000 00:00 0 
+7f41bfdfe000-7f41bfdff000 ---p 00000000 00:00 0 
+7f41bfdff000-7f41c0021000 rw-p 00000000 00:00 0 
+7f41c0021000-7f41c4000000 ---p 00000000 00:00 0 
+7f41c4000000-7f41c4001000 r--s 00000000 08:12 9441436                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/simpleclient_tracer_common.jar
+7f41c4001000-7f41c4003000 r--s 00005000 08:12 9441426                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/istack-commons-runtime.jar
+7f41c4003000-7f41c4006000 r--s 0000f000 08:12 9441425                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/txw2.jar
+7f41c4006000-7f41c400b000 r--s 00022000 08:12 9441424                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jaxb-core.jar
+7f41c400b000-7f41c400f000 r--s 0001b000 08:12 9441422                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jaxb-api.jar
+7f41c400f000-7f41c4011000 r--s 00002000 08:12 9441421                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/uom-lib-common.jar
+7f41c4011000-7f41c4016000 r--s 00039000 08:12 9441420                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/indriya.jar
+7f41c4016000-7f41c4018000 r--s 00005000 08:12 9441419                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/unit-api.jar
+7f41c4018000-7f41c4020000 r--s 00062000 08:12 9441415                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/lucene-backward-codecs.jar
+7f41c4020000-7f41c4021000 r--s 00004000 08:12 9441413                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/annotations.jar
+7f41c4021000-7f41c4025000 r--s 00024000 08:12 9441412                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jsonic.jar
+7f41c4025000-7f41c4029000 r--s 001c7000 08:12 9441411                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/language-detector.jar
+7f41c4029000-7f41c402b000 r--s 00003000 08:12 9441410                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/aho-corasick-double-array-trie.jar
+7f41c402b000-7f41c402e000 r--s 00011000 08:12 9441409                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/segment.jar
+7f41c402e000-7f41c4046000 r--s 00108000 08:12 9441408                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/hppc.jar
+7f41c4046000-7f41c4048000 r--s 0000c000 08:12 9441407                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/morfologik-stemming.jar
+7f41c4048000-7f41c4049000 r--s 00003000 08:12 9441406                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/morfologik-speller.jar
+7f41c4049000-7f41c404a000 r--s 00007000 08:12 9441405                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/morfologik-fsa-builders.jar
+7f41c404a000-7f41c404c000 r--s 00001000 08:12 9441403                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/j2objc-annotations.jar
+7f41c404c000-7f41c404e000 r--s 00002000 08:12 9441402                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/error_prone_annotations.jar
+7f41c404e000-7f41c4059000 r--s 0002a000 08:12 9441401                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/checker-qual.jar
+7f41c4059000-7f41c405b000 r--s 00003000 08:12 9441400                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/jsr305.jar
+7f41c405b000-7f41c408f000 r--s 00287000 08:12 9441397                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/guava.jar
+7f41c408f000-7f41c409a000 r--s 00083000 08:12 9441395                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/commons-lang3.jar
+7f41c409a000-7f41d4021000 rw-p 00000000 00:00 0 
+7f41d4021000-7f41d8000000 ---p 00000000 00:00 0 
+7f41d8000000-7f41d8001000 r--s 00004000 08:12 9441404                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/morfologik-fsa.jar
+7f41d8001000-7f41d8002000 r--s 00000000 08:12 9441399                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/listenablefuture.jar
+7f41d8002000-7f41d8004000 r--s 00000000 08:12 9441398                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/failureaccess.jar
+7f41d8004000-7f41d8008000 r--s 00031000 08:12 9441396                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/commons-text.jar
+7f41d8008000-7f41d8019000 r--s 00135000 08:12 9441394                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/libs/languagetool-core.jar
+7f41d8019000-7f41d801e000 r--p 00000000 08:12 789684                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f41d801e000-7f41d802e000 r-xp 00005000 08:12 789684                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f41d802e000-7f41d8032000 r--p 00015000 08:12 789684                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f41d8032000-7f41d8033000 r--p 00018000 08:12 789684                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f41d8033000-7f41d8034000 rw-p 00019000 08:12 789684                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnet.so
+7f41d8034000-7f41d803b000 r--p 00000000 08:12 789685                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f41d803b000-7f41d8043000 r-xp 00007000 08:12 789685                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f41d8043000-7f41d8046000 r--p 0000f000 08:12 789685                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f41d8046000-7f41d8047000 r--p 00012000 08:12 789685                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f41d8047000-7f41d8048000 rw-p 00013000 08:12 789685                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libnio.so
+7f41d8048000-7f41d804a000 r--s 0002a000 08:12 9441536                    /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/languagetool-server.jar
+7f41d804a000-7f41d8051000 r--s 000d3000 08:12 789734                     /usr/lib/jvm/java-8-openjdk/jre/lib/jfr.jar
+7f41d8051000-7f41d80a5000 r--p 00000000 07:17 187                        /var/lib/snapd/snap/code/130/usr/lib/locale/aa_DJ.utf8/LC_CTYPE
+7f41d80a5000-7f41d80a6000 r--p 00000000 07:17 2812                       /var/lib/snapd/snap/code/130/usr/lib/locale/es_MX.utf8/LC_NUMERIC
+7f41d80a6000-7f41d80a7000 r--p 00000000 07:17 2507                       /var/lib/snapd/snap/code/130/usr/lib/locale/es_AR.utf8/LC_TIME
+7f41d80a7000-7f41d80a8000 r--p 00000000 07:17 2810                       /var/lib/snapd/snap/code/130/usr/lib/locale/es_MX.utf8/LC_MONETARY
+7f41d80a8000-7f41d80a9000 r--p 00000000 07:17 331                        /var/lib/snapd/snap/code/130/usr/lib/locale/an_ES.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+7f41d80a9000-7f41d80aa000 r--p 00000000 07:17 1427                       /var/lib/snapd/snap/code/130/usr/lib/locale/chr_US/LC_PAPER
+7f41d80aa000-7f41d80ab000 r--p 00000000 07:17 277                        /var/lib/snapd/snap/code/130/usr/lib/locale/agr_PE/LC_NAME
+7f41d80ab000-7f41d80ac000 r--p 00000000 07:17 2803                       /var/lib/snapd/snap/code/130/usr/lib/locale/es_MX.utf8/LC_ADDRESS
+7f41d80ac000-7f41d90f0000 rw-p 00000000 00:00 0 
+7f41d90f0000-7f41d92c2000 r--s 03cc5000 08:12 789752                     /usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar
+7f41d92c2000-7f41dabfb000 rw-p 00000000 00:00 0 
+7f41dabfb000-7f41dabfc000 ---p 00000000 00:00 0 
+7f41dabfc000-7f41dacfc000 rw-p 00000000 00:00 0 
+7f41dacfc000-7f41dacfd000 ---p 00000000 00:00 0 
+7f41dacfd000-7f41dadfd000 rw-p 00000000 00:00 0 
+7f41dadfd000-7f41dadfe000 ---p 00000000 00:00 0 
+7f41dadfe000-7f41daefe000 rw-p 00000000 00:00 0 
+7f41daefe000-7f41daeff000 ---p 00000000 00:00 0 
+7f41daeff000-7f41dafff000 rw-p 00000000 00:00 0 
+7f41dafff000-7f41db000000 ---p 00000000 00:00 0 
+7f41db000000-7f41db100000 rw-p 00000000 00:00 0 
+7f41db100000-7f41db101000 ---p 00000000 00:00 0 
+7f41db101000-7f41db2a9000 rw-p 00000000 00:00 0 
+7f41db2a9000-7f41dbc6e000 ---p 00000000 00:00 0 
+7f41dbc6e000-7f41dbd16000 rw-p 00000000 00:00 0 
+7f41dbd16000-7f41dc6da000 ---p 00000000 00:00 0 
+7f41dc6da000-7f41dc76e000 rw-p 00000000 00:00 0 
+7f41dc76e000-7f41dcc11000 ---p 00000000 00:00 0 
+7f41dcc11000-7f41dcc3a000 rw-p 00000000 00:00 0 
+7f41dcc3a000-7f41dcfd2000 ---p 00000000 00:00 0 
+7f41dcfd2000-7f41dd9a2000 rwxp 00000000 00:00 0 
+7f41dd9a2000-7f41ebfd2000 ---p 00000000 00:00 0 
+7f41ebfd2000-7f41ebfdf000 r--p 00000000 08:12 789674                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f41ebfdf000-7f41ebff6000 r-xp 0000d000 08:12 789674                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f41ebff6000-7f41ebffd000 r--p 00024000 08:12 789674                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f41ebffd000-7f41ebffe000 r--p 0002a000 08:12 789674                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f41ebffe000-7f41ebfff000 rw-p 0002b000 08:12 789674                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f41ebfff000-7f41ecb2d000 rw-p 00000000 00:00 0 
+7f41ecb2d000-7f41f0000000 ---p 00000000 00:00 0 
+7f41f0000000-7f41f0001000 r--p 00000000 07:17 2814                       /var/lib/snapd/snap/code/130/usr/lib/locale/es_MX.utf8/LC_TELEPHONE
+7f41f0001000-7f41f0002000 r--p 00000000 07:17 189                        /var/lib/snapd/snap/code/130/usr/lib/locale/aa_DJ.utf8/LC_MEASUREMENT
+7f41f0002000-7f41f0003000 r--p 00000000 08:12 666083                     /usr/lib/librt.so.1
+7f41f0003000-7f41f0004000 r-xp 00001000 08:12 666083                     /usr/lib/librt.so.1
+7f41f0004000-7f41f0005000 r--p 00002000 08:12 666083                     /usr/lib/librt.so.1
+7f41f0005000-7f41f0006000 r--p 00002000 08:12 666083                     /usr/lib/librt.so.1
+7f41f0006000-7f41f0007000 rw-p 00003000 08:12 666083                     /usr/lib/librt.so.1
+7f41f0007000-7f41f0008000 ---p 00000000 00:00 0 
+7f41f0008000-7f41f000b000 ---p 00000000 00:00 0 
+7f41f000b000-7f41f0108000 rw-p 00000000 00:00 0 
+7f41f0108000-7f41f0116000 r--p 00000000 08:12 665278                     /usr/lib/libm.so.6
+7f41f0116000-7f41f0195000 r-xp 0000e000 08:12 665278                     /usr/lib/libm.so.6
+7f41f0195000-7f41f01f3000 r--p 0008d000 08:12 665278                     /usr/lib/libm.so.6
+7f41f01f3000-7f41f01f4000 r--p 000ea000 08:12 665278                     /usr/lib/libm.so.6
+7f41f01f4000-7f41f01f5000 rw-p 000eb000 08:12 665278                     /usr/lib/libm.so.6
+7f41f01f5000-7f41f03ed000 r--p 00000000 08:12 789696                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f41f03ed000-7f41f0d63000 r-xp 001f8000 08:12 789696                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f41f0d63000-7f41f0f17000 r--p 00b6e000 08:12 789696                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f41f0f17000-7f41f0fae000 r--p 00d22000 08:12 789696                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f41f0fae000-7f41f0fd7000 rw-p 00db9000 08:12 789696                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f41f0fd7000-7f41f100d000 rw-p 00000000 00:00 0 
+7f41f100d000-7f41f1010000 r--p 00000000 08:12 665822                     /usr/lib/libz.so.1.2.13
+7f41f1010000-7f41f101e000 r-xp 00003000 08:12 665822                     /usr/lib/libz.so.1.2.13
+7f41f101e000-7f41f1025000 r--p 00011000 08:12 665822                     /usr/lib/libz.so.1.2.13
+7f41f1025000-7f41f1026000 r--p 00017000 08:12 665822                     /usr/lib/libz.so.1.2.13
+7f41f1026000-7f41f1027000 rw-p 00018000 08:12 665822                     /usr/lib/libz.so.1.2.13
+7f41f1027000-7f41f1049000 r--p 00000000 08:12 665263                     /usr/lib/libc.so.6
+7f41f1049000-7f41f11a6000 r-xp 00022000 08:12 665263                     /usr/lib/libc.so.6
+7f41f11a6000-7f41f11fe000 r--p 0017f000 08:12 665263                     /usr/lib/libc.so.6
+7f41f11fe000-7f41f1202000 r--p 001d6000 08:12 665263                     /usr/lib/libc.so.6
+7f41f1202000-7f41f1204000 rw-p 001da000 08:12 665263                     /usr/lib/libc.so.6
+7f41f1204000-7f41f1211000 rw-p 00000000 00:00 0 
+7f41f1211000-7f41f1212000 r--p 00000000 07:17 2806                       /var/lib/snapd/snap/code/130/usr/lib/locale/es_MX.utf8/LC_IDENTIFICATION
+7f41f1212000-7f41f1215000 r--p 00000000 08:12 789692                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f41f1215000-7f41f1219000 r-xp 00003000 08:12 789692                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f41f1219000-7f41f121b000 r--p 00007000 08:12 789692                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f41f121b000-7f41f121c000 r--p 00008000 08:12 789692                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f41f121c000-7f41f121d000 rw-p 00009000 08:12 789692                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f41f121d000-7f41f1225000 rw-s 00000000 00:21 7497                       /tmp/hsperfdata_daniriolo/53236
+7f41f1225000-7f41f1226000 rw-p 00000000 00:00 0 
+7f41f1226000-7f41f1227000 r--p 00000000 00:00 0 
+7f41f1227000-7f41f122c000 r--p 00000000 08:12 789691                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f41f122c000-7f41f1233000 r-xp 00005000 08:12 789691                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f41f1233000-7f41f1235000 r--p 0000c000 08:12 789691                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f41f1235000-7f41f1237000 r--p 0000d000 08:12 789691                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f41f1237000-7f41f1238000 rw-p 0000f000 08:12 789691                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f41f1238000-7f41f123b000 r--p 00000000 08:12 789657                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f41f123b000-7f41f1244000 r-xp 00003000 08:12 789657                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f41f1244000-7f41f1247000 r--p 0000c000 08:12 789657                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f41f1247000-7f41f1248000 r--p 0000e000 08:12 789657                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f41f1248000-7f41f1249000 rw-p 0000f000 08:12 789657                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f41f1249000-7f41f124b000 rw-p 00000000 00:00 0 
+7f41f124b000-7f41f124c000 r--p 00000000 08:12 665251                     /usr/lib/ld-linux-x86-64.so.2
+7f41f124c000-7f41f1272000 r-xp 00001000 08:12 665251                     /usr/lib/ld-linux-x86-64.so.2
+7f41f1272000-7f41f127c000 r--p 00027000 08:12 665251                     /usr/lib/ld-linux-x86-64.so.2
+7f41f127c000-7f41f127e000 r--p 00031000 08:12 665251                     /usr/lib/ld-linux-x86-64.so.2
+7f41f127e000-7f41f1280000 rw-p 00033000 08:12 665251                     /usr/lib/ld-linux-x86-64.so.2
+7fffc33fa000-7fffc341c000 rw-p 00000000 00:00 0                          [stack]
+7fffc348a000-7fffc348e000 r--p 00000000 00:00 0                          [vvar]
+7fffc348e000-7fffc3490000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+java_command: org.languagetool.server.HTTPServer -p 8085
+java_class_path (initial): /home/daniriolo/.cache/language_tool_python/LanguageTool-5.7/languagetool-server.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/daniriolo/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
+SHELL=/bin/bash
+DISPLAY=:0.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xb377a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xb377a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x976460], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x976460], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x976460], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x976460], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x9767b0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x976700], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x976700], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x976700], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x976700], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID="ManjaroLinux"
+DISTRIB_RELEASE="23.0.0"
+DISTRIB_CODENAME="Ultima Thule"
+DISTRIB_DESCRIPTION="Manjaro Linux"
+
+uname:Linux 5.15.112-1-MANJARO #1 SMP PREEMPT Wed May 17 11:11:32 UTC 2023 x86_64
+libc:glibc 2.37 NPTL 2.37 
+rlimit: STACK 8192k, CORE infinity, NPROC 127996, NOFILE 524288, AS infinity
+load average:1.10 1.26 1.15
+
+/proc/meminfo:
+MemTotal:       32790544 kB
+MemFree:        12890052 kB
+MemAvailable:   25838112 kB
+Buffers:          468200 kB
+Cached:         12232856 kB
+SwapCached:            0 kB
+Active:          3177124 kB
+Inactive:       15390292 kB
+Active(anon):      16260 kB
+Inactive(anon):  5929548 kB
+Active(file):    3160864 kB
+Inactive(file):  9460744 kB
+Unevictable:         152 kB
+Mlocked:             152 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:              5608 kB
+Writeback:             0 kB
+AnonPages:       5866224 kB
+Mapped:          1131032 kB
+Shmem:             79448 kB
+KReclaimable:     794828 kB
+Slab:             996928 kB
+SReclaimable:     794828 kB
+SUnreclaim:       202100 kB
+KernelStack:       18352 kB
+PageTables:        55472 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    16395272 kB
+Committed_AS:   19731096 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      134536 kB
+VmallocChunk:          0 kB
+Percpu:             6976 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      740364 kB
+DirectMap2M:    20148224 kB
+DirectMap1G:    12582912 kB
+
+container (cgroup) information:
+container_type: cgroupv2
+cpu_cpuset_cpus: failed
+cpu_memory_nodes: failed
+active_processor_count: 6
+cpu_quota: -2
+cpu_period: -2
+cpu_shares: -2
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -1
+memory_soft_limit_in_bytes: 0
+memory_usage_in_bytes: 5798035456
+memory_max_usage_in_bytes: -2
+
+
+CPU:total 6 (initial active 6) (6 cores per cpu, 1 threads per core) family 6 model 158 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
+stepping	: 10
+microcode	: 0xf0
+cpu MHz		: 2800.000
+cache size	: 9216 KB
+physical id	: 0
+siblings	: 6
+core id		: 0
+cpu cores	: 6
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed
+bogomips	: 5602.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
+stepping	: 10
+microcode	: 0xf0
+cpu MHz		: 3812.926
+cache size	: 9216 KB
+physical id	: 0
+siblings	: 6
+core id		: 1
+cpu cores	: 6
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed
+bogomips	: 5602.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
+stepping	: 10
+microcode	: 0xf0
+cpu MHz		: 3841.965
+cache size	: 9216 KB
+physical id	: 0
+siblings	: 6
+core id		: 2
+cpu cores	: 6
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed
+bogomips	: 5602.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
+stepping	: 10
+microcode	: 0xf0
+cpu MHz		: 3808.902
+cache size	: 9216 KB
+physical id	: 0
+siblings	: 6
+core id		: 3
+cpu cores	: 6
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed
+bogomips	: 5602.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
+stepping	: 10
+microcode	: 0xf0
+cpu MHz		: 3875.241
+cache size	: 9216 KB
+physical id	: 0
+siblings	: 6
+core id		: 4
+cpu cores	: 6
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed
+bogomips	: 5602.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz
+stepping	: 10
+microcode	: 0xf0
+cpu MHz		: 3874.207
+cache size	: 9216 KB
+physical id	: 0
+siblings	: 6
+core id		: 5
+cpu cores	: 6
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer invvpid ept_x_only ept_ad ept_1gb flexpriority tsc_offset vtpr mtf vapic ept vpid unrestricted_guest ple shadow_vmcs pml ept_mode_based_exec
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds mmio_stale_data retbleed
+bogomips	: 5602.18
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 32790544k(12888288k free), swap 0k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.372-b07) for linux-amd64 JRE (1.8.0_372-b07), built on Apr 20 2023 13:21:29 by "builduser" with gcc 12.2.1 20230201
+
+time: Sat Jun 10 16:26:16 2023
+timezone: CST
+elapsed time: 1.497722 seconds (0d 0h 0m 1s)
+
